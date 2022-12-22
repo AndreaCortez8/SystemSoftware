@@ -1,0 +1,507 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans 3', sans-serif;
+  text-decoration: none;
+}
+
+/*CABECERA*/
+.logo img{
+  width: 350px;
+  float: left;
+  margin-left: 50px;
+}
+
+.logo2  img{
+  width: 130px;
+  float: right;
+  margin-right: 50px;
+}
+
+.header {
+  padding: 0px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  background: #fff;
+  top: 0;
+  left: 0;
+  height: 180px;
+}
+
+.header__superior{
+  max-width: 1500px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.content{
+  width: 1200px;
+  height: 100px;
+  margin: auto;
+  color: #fff;
+  position: relative;
+}
+
+.content .par{
+  padding-left: 20px;
+  padding-bottom: 25px;
+  font-family: Arial;
+  letter-spacing: 1.2px;
+  line-height: 30px;
+}
+
+.content h1{
+  font-family: 'Times New Roman';
+  text-align: center;
+  color: #000000;
+  font-size: 20px;
+  padding-left: 0px;
+  margin-top: 0%;
+  letter-spacing: 0px;
+}
+.content h4{
+  font-family: 'Arial';
+  color: #000000;
+  font-size: 15px;
+  padding-left: 0px;
+  margin-top: 0%;
+  letter-spacing: 0px;
+}
+.content span{
+  font-family: 'Times New Roman';
+  color: #00254f;
+  font-size: 40px
+}
+
+
+
+/* MENÚ */
+.container__menu{
+  width: 100%;
+  height: 50px;
+  background: #00254f;
+  padding: 0px 0px;
+}
+.menu{
+  max-width: 0px;
+  margin: 0;
+  height: 300%;
+}
+
+nav{
+  max-width: 100px;
+  margin: 200;
+  height: 0%;
+}
+nav > ul{
+  height: 100%;
+  display: flex;
+}
+
+nav ul li{
+  height: 5px;
+  list-style: none;
+  position: relative;
+}
+
+
+nav > ul > li > a{
+  width: 100%;
+  height: 10px;
+  margin-left: 150px;
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: all 300ms ease;
+}
+
+nav > ul > li > a:hover{
+  transform: scale(1.1);
+  background: #0074C7;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+#selected{
+  transform: scale(1.1);
+  background-color: #0074C7;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+
+/*SUBMENU*/
+
+nav ul li ul{
+  width: 150px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  position: absolute;
+  top: 90px;
+  left: -10px;
+  padding: 14px 0px;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  z-index: 10;
+  transition: all 300ms ease;
+}
+
+nav ul li:hover ul{
+  visibility: visible;
+  opacity: 1;
+  top: 70px;
+}
+
+nav ul li ul:before{
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 14px solid white;
+  position: absolute;
+  top: -12px;
+  left: 0px;
+}
+
+nav ul li ul li a{
+  display: block;
+  color: #0099E9;
+  padding: 6px;
+  padding-left: 0px;
+  margin-top: -20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: all 300ms ease;
+}
+
+nav ul li ul li a:hover{
+  background: #0074C7;
+  color: #fff;
+  transform: scale(1.2);
+  padding-left: 30px;
+  font-size: 14px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+
+/*CONTENDORES DEL CUERPO*/
+body {
+  background: #060606;
+  padding: 0px 0;
+}
+.my-container {
+  position: relative;
+  background-image: linear-gradient(105deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(Imagenes/info.jpeg);
+  overflow: hidden;
+  margin-top: 22px;
+  height:550px;
+}
+.my-container h1 {
+    margin-top: 25px;
+    padding: 0px;
+    margin-left: 100px;
+    text-align: left;
+    z-index: 10;
+    -webkit-text-stroke: 0.2px #ffffff;
+    color: #00254f;
+}
+
+
+.icon{
+  width: 200px;
+  float: center;
+  height: 70px;
+  text-align: center;
+}
+
+ul{
+  float: left;
+  display: flex;
+  margin-left: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+ul li{
+  list-style: none;
+  margin-left: 20px;
+  margin-top: 27px;
+  font-size: 20px;
+}
+
+ul li a{
+  text-decoration: none;
+  margin-left: 0px;
+  color: rgb(248, 245, 245);
+  font-family: Arial;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+  
+}
+
+ul li a:hover{
+  color: #e9e1da;
+ 
+}
+
+ul1{
+  float: none;
+  display: list-item;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+ul1 li{
+  list-style: none ;
+  margin-left: 200px;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+ul1 li a{
+  hyphens: auto;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: Arial;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+  line-height: 0.9mm;
+}
+
+.form{
+  width: 330px;
+  height: 380px;
+  background: #011d3c;
+  position: relative;
+  top: 120px;
+  left: 600px;
+  transform: translate(0%,-5%);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.form h2{
+  width: 280px;
+  font-family: sans-serif;
+  text-align: center;
+  color: #ff7200;
+  font-size: 22px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 2px;
+  padding: 8px;
+}
+
+
+.form input{
+  width: 240px;
+  height: 35px;
+  background: transparent;
+  border-bottom: 1px solid #ff7200;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  font-family: sans-serif;
+}
+
+.form input:focus{
+  outline: none;
+}
+
+::placeholder{
+  color: #fff;
+  font-family: Arial;
+}
+
+.btnn{
+  width: 100px;
+  height: 30px;
+  background: #ff7200;
+  border: none;
+  margin-top: 30px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  float: right;
+  transition: 0.4s ease;
+
+}
+.btnn:hover{
+  background: #fff;
+  color: #ff7200;
+  float: right;
+}
+.btnn a{
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+
+.form .link{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  padding-top: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.form .link1{
+  font-family: Arial;
+  font-size: 15px;
+  padding-top: 10px;
+  text-align: left;
+  color: rgb(255, 0, 0);
+}
+
+.form .link a{
+  text-decoration: none;
+  color: #ff7200;
+}
+
+.liw{
+  padding-top: 15px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #fff;
+}
+.icons a{
+  text-decoration: none;
+  color: #fff;
+}
+.icons ion-icon{
+  color: #fff;
+  font-size: 30px;
+  padding-left: 14px;
+  padding-top: 5px;
+  transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+  color: #ff7200;
+}
+
+
+
+/*REGISTRARSE*/
+
+.form2{
+  width: 600px;
+  height: 420px;
+  background: #011d3c;
+  position: relative;
+  top: 60px;
+  left: 480px;
+  transform: translate(0%,-5%);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.form2 h2{
+  width: 280px;
+  font-family: sans-serif;
+  text-align: center;
+  color: #ff7200;
+  font-size: 22px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 2px;
+  padding: 8px;
+}
+
+.form2 input{
+  width: 500px;
+  height: 35px;
+  background: transparent;
+  border-bottom: 1px solid #ff7200;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-top: 30px;
+  font-family: sans-serif;
+  margin-left: 10px;
+  
+}
+
+.form2 input:focus{
+  outline: none;
+}
+
+::placeholder {
+  color: #fff;
+  font-family: Arial;
+}
+
+.btnn {
+  width: 100px;
+  height: 30px;
+  background: #ff7200;
+  border: none;
+  margin-top: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  float: right;
+  transition: 0.4s ease;
+}
+.btnn:hover{
+  background: #fff;
+  color: #ff7200;
+}
+.btnn a{
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.form2 .link{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  padding-top: 20px;
+  text-align: center;
+  color: #fff;
+}
+.form2 .link a{
+  text-decoration: none;
+  color: #ff7200;
+}
+.liw{
+  padding-top: 15px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #fff;
+}
+.icons a{
+  text-decoration: none;
+  color: #fff;
+}
+.icons ion-icon{
+  color: #fff;
+  font-size: 30px;
+  padding-left: 14px;
+  padding-top: 5px;
+  transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+  color: #ff7200;
+}

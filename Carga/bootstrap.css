@@ -1,0 +1,269 @@
+/*tabla carga academica*/
+
+.outer-wrapper {
+    margin: -50px;
+    margin-left: 400px;
+    margin-right: 50px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.9);
+    max-width: fit-content;
+    max-height: fit-content;
+    background-color: rgb(255, 255, 255);
+  }
+  .table-wrapper {
+    overflow-y: scroll;
+    overflow-x: scroll;
+    height: fit-content;
+    max-height: 59.4vh; 
+    margin-top: 50px;
+    margin: 15px;
+    padding-bottom: 20px;
+  }
+  table {
+    min-width: max-content;
+    border-collapse: separate;
+    border-spacing: 0px;    
+    
+  }
+  table th{
+    position: sticky; 
+    top: 0px;
+    background-color: #133b5c;
+    color: rgb(241, 245, 179);
+    text-align: center;
+    font-weight: normal;
+    font-size: 18px;
+    outline: 0.7px solid black;
+    border: 1.5px solid black;
+  } 
+  table th, table td {
+    
+    padding: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  table td {
+    text-align: left;
+    
+    font-size: 15px;
+    border: 1px solid rgb(177, 177, 177);
+    padding-left: 20px;
+    
+  }
+  
+
+/*************************************************************/
+  body{
+    height: 100vh;
+    width: 100%;
+    background-color: #F5F5FC !important;
+    color: #555;
+  }
+  
+  /***STYLE PARA EL FILE***/
+  .zmdi-upload{
+    padding: 0px 15px 0px 0px;
+  }
+  .zmdi-upload:hover{
+    color: black;
+    transition: color 0.2s linear 0.2s;
+  }
+  
+  .file-input__input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  }
+  
+  .file-input__label {
+  margin-left: 190px;
+  /*margin-top:50px;*/
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 12px;
+  background-color: #00254f;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  .file-input__label:hover{
+    color: #EABE3F;
+  }
+
+  /*******/
+  
+  .btn-enviar{
+  margin-left: 190px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 45px;
+  background-color: #00254f;
+  border: none;
+  border-radius: 2px;
+  }
+  .btn-enviar:hover{
+  color: #EABE3F;
+  }
+  h6{
+  color:#ff7200; 
+  background-color: #cecece; 
+  padding: 10px 0px;
+  }
+  h3{
+    font-size: 35px;
+    font-weight: 900;
+    color: #ffa900;
+    margin-top: 150px;
+  }
+  
+/*************************************************************/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.sidebar{
+  position: fixed;
+  width: 360px;
+  left: -360px;
+  height: 100%;
+  background: #00254f;
+  transition: all .5s ease;
+}
+
+.sidebar header{
+  font-size: 28px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #00254f;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
+}
+.sidebar a{
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: white;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-left: 5px solid transparent;
+  font-family: 'Open Sans', sans-serif;
+  transition: all .5s ease;
+}
+a.active,a:hover{
+  border-left: 5px solid #ff7200;
+  color: #ff7200;
+}
+.sidebar a i{
+  width:30px;
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar a span{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #00254f;
+  margin: 15px 30px;
+  font-size: 29px;
+  background: #00254f;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: all .5s ease;
+}
+#cancel.active,#cancel:hover{
+    color: #ff7200;
+}
+#btn.active,#btn:hover{
+    color: #ff7200;
+}
+
+label #cancel{
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel{
+  margin-left: 370px;
+  opacity: 1;
+  visibility: visible;
+}
+
+#check:checked ~ section{
+    margin-left: 250px;
+  }
+
+section{
+    background: url(../Estilo_imagenes/Imagenes/fondoNegro.jpeg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 76vh;
+    transition: all .5s;
+}
+
+@media(max-width : 860px){
+  .sidebar{
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+  }
+  header,#btn,#cancel{
+    display: none;
+  }
+  span{
+    position: absolute;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sidebar a{
+    height: 60px;
+  }
+  .sidebar a i{
+    margin-left: -10px;
+  }
+  a:hover {
+    width: 200px;
+    background: inherit;
+  }
+  .sidebar a:hover span{
+    opacity: 1;
+    visibility: visible;
+  }
+
+}
